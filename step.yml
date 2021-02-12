@@ -1,0 +1,76 @@
+#
+# A couple of useful guides & docs:
+#
+# - Main Bitrise CLI docs: https://github.com/bitrise-io/bitrise/tree/master/_docs
+# - Step Development Guideline: https://github.com/bitrise-io/bitrise/blob/master/_docs/step-development-guideline.md
+# - Bitrise.yml format spec: https://github.com/bitrise-io/bitrise/blob/master/_docs/bitrise-yml-format-spec.md
+# - Bitrise docs: http://devcenter.bitrise.io/
+# - Bitrise CLI guides: http://devcenter.bitrise.io/bitrise-cli/
+
+title: |-
+  Beat Android code stats
+summary: |
+  Generates a report with the Beat Android project stats
+description: |
+  Generates a report with the Beat Android project stats
+website: https://github.com/luismunyoz/bitrise-step-beat-android-code-stats
+source_code_url: https://github.com/luismunyoz/bitrise-step-beat-android-code-stats
+support_url: https://github.com/luismunyoz/bitrise-step-beat-android-code-stats/issues
+host_os_tags:
+  - osx-10.10
+  - ubuntu-16.04
+
+project_type_tags:
+   - android
+
+type_tags:
+  - utility
+
+is_requires_admin_user: false
+is_always_run: false
+is_skippable: true
+
+deps:
+  brew:
+  - name: cloc
+  apt_get:
+  - name: cloc
+
+toolkit:
+  bash:
+    entry_file: step.sh
+
+inputs:
+  - project_location: $BITRISE_PROJECT_PATH
+    opts:
+      title: Project Location
+      summary: "The root directory of your Android project."
+      description: "The root directory of your Android project. For example, where your root build gradle file exist (also gradlew, settings.gradle, and so on)"
+      is_required: true
+
+outputs:
+  - KOTLIN_LINES_CODE:
+    opts:
+      title: "Kotlin lines of code"
+      summary: Lines of code written in Kotlin
+  - JAVA_LINES_CODE:
+    opts:
+      title: "Java lines of code"
+      summary: Lines of code written in Java
+  - XML_LINES_CODE:
+    opts:
+      title: "XML lines of code"
+      summary: Lines of code written in XML
+  - KOTLIN_PERCENTAGE_CODE:
+    opts:
+      title: "Kotlin percentage of code"
+      summary: Percentage of the code written in Kotlin
+  - JAVA_PERCENTAGE_CODE:
+    opts:
+      title: "Java percentage of code"
+      summary: Percentage of the code written in Java
+  - DOCUMENTATION_FILES:
+    opts:
+      title: "Documentation files"
+      summary: Number of documentation files in the project
+
