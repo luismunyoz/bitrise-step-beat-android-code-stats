@@ -8,11 +8,11 @@
 # - Bitrise CLI guides: http://devcenter.bitrise.io/bitrise-cli/
 
 title: |-
-  Beat Android code stats
+  Android code stats
 summary: |
-  Generates a report with the Beat Android project stats
+  Generates some Android project stats
 description: |
-  Generates a report with the Beat Android project stats
+  Generates some variables for Android project stats
 website: https://github.com/luismunyoz/bitrise-step-beat-android-code-stats
 source_code_url: https://github.com/luismunyoz/bitrise-step-beat-android-code-stats
 support_url: https://github.com/luismunyoz/bitrise-step-beat-android-code-stats/issues
