@@ -1,6 +1,6 @@
-# Beat Android code stats
+# Android code stats
 
-Generates a report with the Beat Android project stats
+Generates a report with the Android project stats
 
 
 ## How to use this Step

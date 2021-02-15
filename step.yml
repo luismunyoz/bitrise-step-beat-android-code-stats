@@ -73,4 +73,20 @@ outputs:
     opts:
       title: "Documentation files"
       summary: Number of documentation files in the project
+  - UNIT_TESTS_COUNT:
+    opts:
+      title: "Unit tests"
+      summary: Number of unit tests in the project
+  - UI_TESTS_COUNT:
+    opts:
+      title: "UI tests"
+      summary: Number of UI tests in the project
+  - MVP_PRESENTERS_COUNT:
+    opts:
+      title: "MVP Presenters"
+      summary: Number of MVP Presenters in the project
+  - VIEWMODEL_COUNT:
+    opts:
+      title: "ViewModels"
+      summary: Number of ViewModels in the project
 
